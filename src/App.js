@@ -25,7 +25,7 @@ let addtask=(task)=>{
   //  setTask([...tasks,{...task,id:tasks.length+1}])
    //console.log(tasks)
   // body:JSON.stringify(task)
-  fetch("https://mytask-38683-default-rtdb.firebaseio.com/addtask.json",{
+  fetch("http://54.86.146.123/api/tasks/",{
     method:"POST",
      body:JSON.stringify(task),
     headers:{

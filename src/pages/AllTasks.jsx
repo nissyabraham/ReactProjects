@@ -6,18 +6,18 @@ export const AllTasks = () => {
    let [tasks,setTask]=useState([])
    const [loading,setLoading]=useState(true)
    useEffect(()=>{
-     fetch("https://mytask-38683-default-rtdb.firebaseio.com/addtask.json")
+     fetch("http://54.86.146.123/api/tasks/")
   .then(x=>x.json()).then(data=>{
-    let tasks_data=[]
-    Object.keys(data).forEach(key=>{
-      let obj={
+     let tasks_data=[]
+     Object.keys(data).forEach(key=>{
+    let obj={
                  id:key,
                  ...data[key]
               }
               tasks_data.push(obj)
     });
     setTask(tasks_data)
-   setLoading(false)
+    setLoading(false)
   })
   //     let tasks_data=[]
   //     Object.keys(data).forEach(key=>{
